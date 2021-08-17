@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Профайл {{ author.get_full_name }}{% endblock %}
+{% block header %}Профайл пользователя{% endblock %}
+{% block content %}
+  <div class="row">
+    {% include "includes/card_author.html" %}
+    <div class="col-md-9">
+      <!-- Посты в профиле -->
+      {% for post in page %}
+        {% include "includes/post_item.html" %}
+        {% endfor %}
+      {% include "includes/paginator.html" %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Об авторе проекта{% endblock %}
+{% load static %}
+{% block content %}
+  <div class="row">
+    <div class="col-md-3 mb-3 mt-1">
+      <div class="card">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="h3">
+                Ткач<br> Олег<br>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="h6 text-muted">
+                Учиться никогда не поздно, а при условии Джом-тьена, очень даже нужно
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="card-body">
+        <div class="card-text">
+          <p>С появлением "Интернета вещей" над выражением "из каждого утюга" скоро никто больше не будет смеяться.</p>
+          <p><img src="{{ MEDIA_URL }}images/oleg-photo.png" alt="Это фотка" style="width:200px" hspace="15" vspace="15"></p>
+          <p><a href="https://github.com/olegvpc?tab=repositories" target="_blank">Посмотреть выполненные проекты</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %} 

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}ПРО ТЕХНОЛОГИИ{% endblock %}
+{% block content %}
+  <div class="row">
+    <div class="col-md-3 mb-3 mt-1">
+      <div class="card">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="h4">
+                О ТЕХНОЛОГИИ
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="h6 text-muted">
+                Технологии решают все
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="card-body">
+        <div class="card-text">
+          <p>
+            Django был разработан в период с 2003 по 2005 год командой, 
+            которая занималась созданием и обслуживанием газетных веб-сайтов. 
+            После создания нескольких сайтов, команда начала повторно 
+            использовать множество общего кода и шаблонов проектирования. 
+            Этот общий код эволюционировал в веб-фреймворк, который превратился 
+            в проект "Django" с открытым исходным кодом в июле 2005 года.
+          </p>
+          <br>
+          <br>
+          <p>
+            <p class="h4"> REST API проекта:<p>
+              При использовании Swagger необходимо авторизоваться введя в поле авторизации
+            значение Token через пробел ПРИМЕР <strong>(Token rfd543vfc....gfddc)</strong><br>
+            - Просмотр API спецификации через  <a href="/api/v1/swagger/" target="_blank">api/v1/swagger/</a><br>
+            - Просмотр JSON спецификации через  <a href="/api/v1/swagger.json" target="_blank">api/v1/swagger.json</a><br>
+            A YAML view of API specification at /swagger.yaml<br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %} 
