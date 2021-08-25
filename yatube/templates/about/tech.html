@@ -7,13 +7,13 @@
         <div class="card-body">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
-              <div class="h4">
-                О ТЕХНОЛОГИИ
+              <div class="h5">
+                <strong>PYTHON</strong>
               </div>
             </li>
             <li class="list-group-item">
               <div class="h6 text-muted">
-                Технологии решают все
+                рулит
               </div>
             </li>
           </ul>
@@ -24,22 +24,31 @@
       <div class="card-body">
         <div class="card-text">
           <p>
-            Django был разработан в период с 2003 по 2005 год командой, 
-            которая занималась созданием и обслуживанием газетных веб-сайтов. 
-            После создания нескольких сайтов, команда начала повторно 
-            использовать множество общего кода и шаблонов проектирования. 
-            Этот общий код эволюционировал в веб-фреймворк, который превратился 
-            в проект "Django" с открытым исходным кодом в июле 2005 года.
+            <img src="{{ MEDIA_URL }}images/python-uses.jpg" alt="Это картинка" style="width:400px" hspace="20" vspace="20"><br>
+            <p class="h4"> Проект социальной сети с возможностью:</p>
+            - регистрации пользователей с контролем аутентификации через WEB и API(Token)<br>
+            - создание и редактирование профиля с расширенными полями (день рождения, фото и т.д.)<br>
+            - создание и редактирование постов<br>
+            - подписка на любимых авторов (с возможностью отписаться)<br>
+            - создание и редактирование комментариев к постам<br>
           </p>
           <br>
+          <p>
+          <p class="h4"> Дополнительный функционал:<p></p>
+            - в проекте реализованы Django tests <a href="https://docs.djangoproject.com/en/dev/topics/testing/" target="_blank">(документация)</a> для проверки фунционала кода<br>
+            - подключение <a href="/https://github.com/olegvpc/api_sp1_bot" target="_blank">Telegram bot</a> для получения информации о последнем посте (опрос API раз в 20 сек) и получение конкретного поста по запросу вида "/post 12" 
+          </p>
           <br>
           <p>
             <p class="h4"> REST API проекта:<p>
-              При использовании Swagger необходимо авторизоваться введя в поле авторизации
+            При использовании Swagger для методов POST/PATCH/PUT/DELETE необходимо авторизоваться введя в поле авторизации
             значение Token через пробел ПРИМЕР <strong>(Token rfd543vfc....gfddc)</strong><br>
             - Просмотр API спецификации через  <a href="/api/v1/swagger/" target="_blank">api/v1/swagger/</a><br>
             - Просмотр JSON спецификации через  <a href="/api/v1/swagger.json" target="_blank">api/v1/swagger.json</a><br>
-            A YAML view of API specification at /swagger.yaml<br>
+            - Просмотр YAML спецификации через  <a href="/api/v1/redoc/" target="_blank">api/v1/redoc/</a><br>
+          <br>
+            <p class="h4"> GraphQL - API проекта (только метод Query):<p>
+            - Просмотр API через  <a href="/api/v1/graphql/" target="_blank">api/v1/graphql/</a><br>
           </p>
         </div>
       </div>

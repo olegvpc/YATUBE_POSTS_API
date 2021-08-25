@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
 ]
 
 INSTALLED_APPS = [
+    'graphene_graphiql_explorer',
     'about.apps.AboutConfig',
     'users.apps.UsersConfig',
     'posts.apps.PostsConfig',
@@ -55,6 +56,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+GRAPHENE = {
+    'SCHEMA': 'schema.schema'
+}
 
 ROOT_URLCONF = 'yatube.urls'
 
@@ -123,7 +128,7 @@ USE_TZ = True
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ],
 
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -143,6 +148,7 @@ SWAGGER_SETTINGS = {
       }
    }
 }
+
 
 STATIC_URL = '/static/'
 

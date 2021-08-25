@@ -1,7 +1,7 @@
 attrs==19.3.0             # via pytest
 certifi==2019.9.11        # via requests
 chardet==3.0.4            # via requests
-django==2.2.6
+django==3.2.6
 idna==2.8                 # via requests
 importlib-metadata==1.5.0  # via pluggy, pytest
 more-itertools==8.2.0     # via pytest
@@ -23,3 +23,7 @@ wcwidth==0.1.8            # via pytest
 zipp==2.2.0               # via importlib-metadata
 mixer==7.1.2
 drf-yasg==1.20.0
+wheel==0.37.0
+graphene-django==2.15.0
+graphene==2.1.8
+graphene-graphiql-explorer==0.0.1

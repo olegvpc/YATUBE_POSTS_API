@@ -32,6 +32,7 @@ python3 -m pip install --upgrade pip
 
 ```
 pip install -r requirements.txt
+pip install https://github.com/creimers/graphene-graphiql-explorer/archive/master.zip
 ```
 
 Выполнить миграции:
@@ -106,4 +107,13 @@ headers = {
     'Authorization': f'Token {TOKEN}'
 }
 requests.post(url=url, headers=headers, data=data)
+```
+
+### Тестирование кода приложения posts и admin с детализацией
+```
+python3 manage.py test -v 2
+```
+или одного выбранного теста
+```
+python3 manage.py test -v 2 posts.tests.test_views.PostsViewsTests.test_post_page_shows_correct_context
 ```

@@ -29,10 +29,15 @@ from drf_yasg import openapi
 from django.conf.urls import include, url
 from django.urls import path
 
-from .views import CommentViewSet, GroupViewSet, PostViewSet
+from .views import CommentViewSet, FollowViewSet, GroupViewSet, PostViewSet
+from django.views.decorators.csrf import csrf_exempt
+from graphene_django.views import GraphQLView  # Загрузка вьюхи из библиотеки
+from .schema import schema
+
+GraphQLView.graphiql_template = "graphene_graphiql_explorer/graphiql.html"
 
 schema_view = get_schema_view(
-   openapi.Info(
+    openapi.Info(
       title="Snippets API",
       default_version='v1',
       description="Test description",
@@ -48,7 +53,8 @@ router_v1 = DefaultRouter()
 router_v1.register('posts', PostViewSet, basename='posts')
 router_v1.register('groups', GroupViewSet, basename='groups')
 router_v1.register(r'posts/(?P<post_id>\d+)/comments',
-                                 CommentViewSet, basename='comments')
+                   CommentViewSet, basename='comments')
+router_v1.register('follow', FollowViewSet, basename='follows')
 
 urlpatterns = [
     url(r'^', include(router_v1.urls)),
@@ -59,4 +65,6 @@ urlpatterns = [
         name='schema-swagger-ui'),
     url(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0),
         name='schema-redoc'),
+    path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True))),
+    # url(r"^graphql/$", GraphQLView.as_view(graphiql=True), name="graphql",),
 ]
