@@ -27,3 +27,7 @@ wheel==0.37.0
 graphene-django==2.15.0
 graphene==2.1.8
 graphene-graphiql-explorer==0.0.1
+gunicorn
+psycopg2-binary
+django-environ
+sentry-sdk

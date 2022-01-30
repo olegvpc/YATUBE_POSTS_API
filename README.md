@@ -46,8 +46,39 @@ python3 manage.py migrate
 ```
 python3 manage.py runserver
 ```
-Проект размещен на web-hosting:
-http://olegvpc1.pythonanywhere.com/
+## ДЕТАЛИ ПРОЕКТА
+Проект размещен на яндекс web-hosting:
+https://olegvpc.ru
+
+Вход на виртульную машину
+ssh olegvpc123@51.250.9.118
+Проект работает не в контейнере
+
+поднят wsgi-сервер: gunicorn - сервер внутренней обработки
+sudo pip install gunicorn
+gunicorn --bind 0.0.0.0:8000 yatube.wsgi
+
+Демон systemd - начальный запуск / перезапуск
+sudo nano /etc/systemd/system/gunicorn.service 
+
+sudo systemctl
+
+Поднят серер nginx
+
+sudo apt install nginx -y
+и файрвол
+sudo ufw allow 'Nginx Full'
+sudo ufw allow OpenSSH 
+
+sudo systemctl start nginx
+
+sudo systemctl start nginx 
+
+sudo nano /etc/nginx/sites-enabled/default
+
+sudo nginx -t
+
+sudo nginx -s reload
 
 ###  REST API:
 
