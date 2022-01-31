@@ -47,23 +47,33 @@ python3 manage.py migrate
 python3 manage.py runserver
 ```
 ## ДЕТАЛИ ПРОЕКТА
-Проект размещен на яндекс web-hosting:
+###Проект размещен на яндекс web-hosting:
 https://olegvpc.ru
 
 Вход на виртульную машину
+
 ssh olegvpc123@51.250.9.118
 Проект работает не в контейнере
 
-поднят wsgi-сервер: gunicorn - сервер внутренней обработки
+###поднят wsgi-сервер: gunicorn - сервер внутренней обработки
+```python
 sudo pip install gunicorn
+```
 gunicorn --bind 0.0.0.0:8000 yatube.wsgi
-
-Демон systemd - начальный запуск / перезапуск
+###Демон systemd - начальный запуск / перезапуск
+```
 sudo nano /etc/systemd/system/gunicorn.service 
-
+```
+```
 sudo systemctl
 
-Поднят серер nginx
+sudo systemctl daemon-reload
+sudo systemctl stop gunicorn
+sudo systemctl start gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+```
+###Поднят серер nginx
 
 sudo apt install nginx -y
 и файрвол
@@ -84,12 +94,12 @@ sudo nginx -s reload
 
 Документирование и структура API описана на drf-yasg (Swagger generator)
 и доступна на end-point
-http://olegvpc1.pythonanywhere.com/api/v1/swagger/
+http://olegvpc.ru/api/v1/swagger/
 
 ###  Пример работы с API:
 #### Авторризация
 Требуется авторизация по Токен (доступно только для зарегистрированных пользователей сайта)
-http://olegvpc1.pythonanywhere.com/api/v1/api-token-auth/
+http://olegvpc.ru/api/v1/api-token-auth/
 
 ```json
 {
@@ -106,7 +116,7 @@ http://olegvpc1.pythonanywhere.com/api/v1/api-token-auth/
 
 #### Запрос для чтения всех постов
 
-http://olegvpc1.pythonanywhere.com/api/v1/posts/
+http://olegvpc.ru/api/v1/posts/
 Ответ от API
 ```json
   [
@@ -117,11 +127,6 @@ http://olegvpc1.pythonanywhere.com/api/v1/posts/
     "pub_date": "2021-07-17T18:57:05.085102Z",
     "image": "http://olegvpc1.pythonanywhere.com/media/posts/pitt-2.jpg",
     "group": 1
-  },
-  {
-    .....
-    .....
-    .....
   }
   ]
 ```
@@ -129,7 +134,7 @@ http://olegvpc1.pythonanywhere.com/api/v1/posts/
 ```python
 import requests
 
-url = 'http://olegvpc1.pythonanywhere.com/api/v1/posts/'
+url = 'http://olegvpc.ru/api/v1/posts/'
 data = {
   'text': 'Тут Ваш текст'
 }

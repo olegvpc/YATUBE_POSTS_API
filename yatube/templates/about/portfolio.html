@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<title>Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('{{ MEDIA_URL }}images/photo-portfolio.jpg');
+  min-height: 100%;
+}
+</style>
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">В начало</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Достижения</a>
+    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">О себе</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Котакт</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+    <h1 class="w3-jumbo"><b>Олег Ткач</b></h1>
+    <p>Программирование на Python и JavaScript</p>
+    <!-- <img src="images/photo-portfolio.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
+    <img src="images/photo-portfolio.jpg"  class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+    <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+      <i class="fa fa-download"></i> Download Resume
+    </button> -->
+  </header>
+
+  <!-- Portfolio Section -->
+  <div class="w3-padding-32 w3-content" id="portfolio">
+    <h2 class="w3-text-grey">Достижения</h2>
+    <hr style="color: gray; height: 2px; border: none; background-color: gray;" class="w3-hover-opacity">
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px;">
+      <p>
+        <h5 class="w3-text-black">Первый проект с использованием функционала Django, Базы данных SQLite, моделек и миграций</h5>
+      </p>
+      <a href="https://github.com/olegvpc/Anfisa_test_icecream" target="_blank"> <img id="anfisa" src='{{ MEDIA_URL }}images/anfisa4friends.jpg' style="width:100%; cursor:pointer" class="w3-hover-opacity"> ссылка на GitHub
+      </a>
+
+      <hr style="color: gray; height: 2px; border: none; background-color: gray;" class="w3-hover-opacity">
+
+      <p>
+        <h5 class="w3-text-black"><a href="https://olegvpc.ru" target="_blank">Большой проект по созданию социальной сети:</a></h5>
+      </p>
+      <p>
+          <a href="https://github.com/olegvpc/YATUBE_POSTS_API" target="_blank"> ссылка на GitHub</a>
+      </p>
+        <!-- End 1-nd photo grid -->
+      <div class="w3-half">
+        <a href="https://olegvpc.ru" target="_blank"> <img src='{{ MEDIA_URL }}images/1.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка index"></a>позволяет создавать и просматривать посты
+        <a href="https://www.olegvpc.ru/auth/login/" target="_blank"> <img src='{{ MEDIA_URL }}images/2.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка auth-login"></a>позволяет фильтровать посты по авторам (для зарегистрированных)
+      </div>
+
+      <div class="w3-half">
+        <a href="https://www.olegvpc.ru/auth/login/" target="_blank"> <img src='{{ MEDIA_URL }}images/3.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка author"></a>расширенные возможности по редактированию профиля
+        <a href="https://www.olegvpc.ru/api/v1/swagger/" target="_blank"> <img src='{{ MEDIA_URL }}images/4.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка Swager"></a>получение и корректировка базы данных по API
+      </div>
+    </div>
+    <!-- End 2-nd photo grid -->
+    <div class="w3-row-padding" style="margin:0 -16px;">
+
+      <p><hr style="color: gray; height: 2px; border: none; background-color: gray;" class="w3-hover-opacity"></p>
+      <p>
+        <h5 class="w3-text-black">Третий (дипломный) проект по созданию кулинарного сайта</h5>
+      </p>
+      <p>
+          <a href="https://github.com/olegvpc/foodgram-project-react" target="_blank"> ссылка на GitHub</a>
+      </p>
+      <div class="w3-half">
+        <a href="http://62.84.112.83/recipes" target="_blank"> <img src='{{ MEDIA_URL }}images/recipe.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка index-recipe"></a>позволяет создавать и просматривать рецепты
+        <a href="https://docs.docker.com/get-started/overview/" target="_blank"> <img src='{{ MEDIA_URL }}images/docker.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка docker"></a>проект работает в контейнерах docker.Images хранятся на DockerHub
+      </div>
+
+      <div class="w3-half">
+        <a href="https://github.com/olegvpc/foodgram-project-react/actions/runs/1766810371" target="_blank"> <img src='{{ MEDIA_URL }}images/action.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка action"></a>проект использует возможности ACTIONS на GitHub
+        <a href="http://62.84.112.83/api/docs/#operation/%D0%9F%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D1%86%D0%B5%D0%BF%D1%82%D0%B0" target="_blank"> <img src='{{ MEDIA_URL }}images/redoc.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка redoc"></a>данные между frontend и backend  передаются через API
+      </div>
+    </div>
+    <!-- End 3-d photo grid -->
+
+  <!-- End Portfolio Section -->
+  </div>
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <h2>О себе</h2>
+    <hr style="color: gray; height: 2px; border: none; background-color: gray;" class="w3-hover-opacity">
+    <p>Привет! Меня зовут Олег Ткач. Я закончил военное училище по специальности "Автоматизированные системы управления".
+      За время своей трудовой деятельности я работал офицером на Узле связи Ген штаба (Москва), после увольнения из армии
+      создал Компанию по продаже компьютеров, работал в коммерческих подразделениях федеральных операторов связи
+      (Оранж (5 лет), Билайн(10 лет), Ростелеком(1 год), МТС(1,5 года).
+      Но в 2021 году решил попробовать себя в программировании и....
+      МЕНЯ ЗАТЯНУЛО С ГОЛОВОЙ :-)<br>
+      В апреле 2021 года а поступил на курсы в Яндекс по профессии "Python backend developer"
+
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <img src='{{ MEDIA_URL }}images/diplom22.jpg' style="width:100%";>
+      </div>
+      <br>
+      В настоящее время прохожу десятимесячные курсы в Яндекс-Практикум по профессии WEB разработчик на JavaScript
+    </p>
+    <h3 class="w3-padding-16">Опыт (пока нет)</h3>
+    <p class="w3-wide">Комплексные проекты под ключ</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:30%">under construction</div>
+    </div>
+    <p class="w3-wide">Разработка backend проекта</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">under construction</div>
+    </div>
+    <p class="w3-wide">Разработка frontend проекта</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">under construction</div>
+    </div><br>
+{##}
+{#    <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-section">#}
+{#      <div class="w3-quarter w3-section">#}
+{#        <span class="w3-xlarge">14+</span><br>#}
+{#        партнеры#}
+{#      </div>#}
+{#      <div class="w3-quarter w3-section">#}
+{#        <span class="w3-xlarge">55+</span><br>#}
+{#        Комплектные работы#}
+{#      </div>#}
+{#      <div class="w3-quarter w3-section">#}
+{#        <span class="w3-xlarge">89+</span><br>#}
+{#        Выполнено работ по рекомендации#}
+{#      </div>#}
+{#      <div class="w3-quarter w3-section">#}
+{#        <span class="w3-xlarge">150+</span><br>#}
+{#        Благодарные Клиенты#}
+{#      </div>#}
+{#    </div>#}
+
+    <!-- <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Download Resume
+    </button> -->
+
+    <!-- Testimonials -->
+    <h3 class="w3-padding-24">Отзывы Заказчиков</h3>
+      <p>Скоро будут</p>
+{#    <img src="images/de-niro.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">#}
+{#    <p><span class="w3-large w3-text-black w3-margin-right">Роберт Де-Ниро.</span> Итальянский парикмахер.</p>#}
+{#    <p>Проект по созданию интернет магазина. Все работы выполнены качественно и в срок!</p><br>#}
+{#   #}
+{#    <img src="images/kluni.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">#}
+{#    <p><span class="w3-large w3-text-black w3-margin-right">Джорж Клуни.</span> Отставной американский матрос.</p>#}
+{#    <p>Oleg saved us from a disaster.</p><br>#}
+{#    #}
+{#    <img src="images/pitt.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">#}
+{#    <p><span class="w3-large w3-text-black w3-margin-right">Брэд Питт.</span> Голливудский актор.</p>#}
+{#    <p>No one is better than Oleg.</p><br>#}
+    
+    <!-- Grid for pricing tables -->
+    <h3 class="w3-padding-16">Ожидания по зарплате</h3>
+    <p>Обсуждаются любые условия</p>
+  <!-- End About Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+    <h2>Свяжитесь со мной
+    </h2>
+    <hr class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Москва, ул. Борисовские пруды д.10 корп 6 кв. 242</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +7 903 009 7538</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: olegvpc@yandex.ru</p>
+    </div>
+
+{#    <p>Связаться с Вами? Направьте мне запрос</p>#}
+{#    <form action="/action_page.php" target="_blank">#}
+{#      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Имя" required name="Имя"></p>#}
+{#      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Ваш Email" required name="Ваш Email"></p>#}
+{#      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Тема письма" required name="Тема письма"></p>#}
+{#      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Сообщение" required name="Сообщение"></p>#}
+{#      <p>#}
+{#        <button class="w3-button w3-light-grey w3-padding-large" type="submit">#}
+{#          <i class="fa fa-paper-plane"></i> Отправить письмо#}
+{#          <!-- <i class="fa fa-camera-retro"></i> Отправить письмо -->#}
+{#        </button>#}
+{#      </p>#}
+{#    </form>#}
+  <!-- End Contact Section -->
+  </div>  
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium"><a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Все права защищены</a></p>
+  <!-- End footer -->
+  </footer>
+  
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// const firstListPhoto = document.querySelector("#first")
+// firstListPhoto.addEventListener("click", handleClick)
+
+// function handleClick(event) {
+//   alert("ПРИЕХАЛИ")
+// }
+
+</script>
+
+</body>
+</html>
