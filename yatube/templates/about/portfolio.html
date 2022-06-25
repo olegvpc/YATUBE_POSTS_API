@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <title>Portfolio</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../static/portfolio.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="../../media/images/favicon.ico">
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
@@ -28,30 +30,34 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
   <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
     <i class="fa fa-remove"></i>
+{#       <span class="btn-close-popup">#}
+{#         <span class="btn-x-equal_click"></span>#}
+{#       </span>#}
   </a>
   <div class="w3-bar-block w3-center">
     <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">В начало</a>
     <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Достижения</a>
     <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">О себе</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Котакт</a>
+    <a href="#web-develop" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Про WEB разработку</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Контакт</a>
   </div>
 </nav>
 
 <!-- Page Content -->
-<div class="w3-main w3-padding-large" style="margin-left:40%">
+<div class="w3-main w3-padding-large" style="margin-left:40%;position:relative">
 
   <!-- Menu icon to open sidebar -->
-  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
-
+  {#  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>#}
+{#    <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0" onclick="openNav()">#}
+{#        <i class="btn-x-equal_click">HELLO</i>#}
+{#    </span>#}
+  <span class="btn-open-popup">
+     <span class="btn-x-equal_click"></span>
+  </span>
   <!-- Header -->
   <header class="w3-container w3-center" style="padding:128px 16px" id="home">
     <h1 class="w3-jumbo"><b>Олег Ткач</b></h1>
     <p>Программирование на Python и JavaScript</p>
-    <!-- <img src="images/photo-portfolio.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
-    <img src="images/photo-portfolio.jpg"  class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
-    <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
-      <i class="fa fa-download"></i> Download Resume
-    </button> -->
   </header>
 
   <!-- Portfolio Section -->
@@ -128,59 +134,72 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <br>
       В настоящее время прохожу десятимесячные курсы в Яндекс-Практикум по профессии WEB разработчик на JavaScript
     </p>
-    <h3 class="w3-padding-16">Опыт (пока нет)</h3>
-    <p class="w3-wide">Комплексные проекты под ключ</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:30%">under construction</div>
-    </div>
-    <p class="w3-wide">Разработка backend проекта</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">under construction</div>
-    </div>
-    <p class="w3-wide">Разработка frontend проекта</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">under construction</div>
-    </div><br>
-{##}
-{#    <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-section">#}
-{#      <div class="w3-quarter w3-section">#}
-{#        <span class="w3-xlarge">14+</span><br>#}
-{#        партнеры#}
-{#      </div>#}
-{#      <div class="w3-quarter w3-section">#}
-{#        <span class="w3-xlarge">55+</span><br>#}
-{#        Комплектные работы#}
-{#      </div>#}
-{#      <div class="w3-quarter w3-section">#}
-{#        <span class="w3-xlarge">89+</span><br>#}
-{#        Выполнено работ по рекомендации#}
-{#      </div>#}
-{#      <div class="w3-quarter w3-section">#}
-{#        <span class="w3-xlarge">150+</span><br>#}
-{#        Благодарные Клиенты#}
-{#      </div>#}
-{#    </div>#}
+    <section class="web-develop" about="Примеры WEB-CSS-JS">
+      <p class="web-develop__title">
+          Проекты во время обучения по профессии WEB разработчик на JavaScript <br>(контент добавляется и редактируется по API)
+      </p>
 
-    <!-- <button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download"></i> Download Resume
-    </button> -->
+      <div class="web-develop__cards" id="web-develop">
+        <!-- добавление новых карточек-проектов -->
+{#        <article class="web-develop__card">#}
+{#          <figure class="web-develop__card-figure">#}
+{#            <a class="web-develop__link" href="https://olegvpc.github.io/my-site/" target="_blank">#}
+{#              <img class="web-develop__card-img" src="../../media/images/my-site.png" alt="">#}
+{#            </a>#}
+{#            <figcaption>#}
+{#              <p class="web-develop__card-description">Описание какого-то проекта - Script с проектами не загружен</p>#}
+{#            </figcaption>#}
+{#          </figure>#}
+{#        </article>#}
 
-    <!-- Testimonials -->
+      </div> <!-- конец секции добавления карточек пректов -->
+      <template id="template-web-develop-card">
+        <article class="web-develop__card">
+          <figure class="web-develop__card-figure">
+            <a class="web-develop__link" href="https://olegvpc.github.io/how-to-learn/" target="_blank">
+              <img class="web-develop__card-img" src="../../media/images/how-to-learn.png" alt="">
+            </a>
+            <figcaption>
+              <p class="web-develop__card-description">Описание проекта Как правильно учиться</p>
+            </figcaption>
+          </figure>
+        </article>
+      </template>
+
+    </section>
+    <section class="skills">
+      <p class="w3-wide">Навыки WEB разработки</p>
+      <div class="skills__element">
+        <img class="skills__logo" src="../../media/images/http5.svg" alt="html-logo">
+        <div class="w3-light-grey skills_width">
+          <div class="skills__line_gray" style="width: 60%">
+            <p class="skills__title">Разметка и стили по дизайну Figma<br>Использование &lt;template&gt; для заполнения данными</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills__element">
+        <img class="skills__logo" src="../../media/images/css.svg" alt="scc-logo">
+        <div class="w3-light-grey skills_width">
+          <div class="skills__line_gray"style="width: 80%">
+            <p class="skills__title">Организация Стилей CSS в соответствии с BEM Nested<br>Создание анимаций, градиентов, SVG-файлов</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills__element">
+        <img class="skills__logo" src="../../media/images/js.svg" alt="js-logo">
+        <div class="w3-light-grey skills_width">
+          <div class="skills__line_gray"style="width: 50%">
+            <p class="skills__title">ООП в разметке<br>Модульное построение кода</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <h3 class="w3-padding-24">Отзывы Заказчиков</h3>
       <p>Скоро будут</p>
-{#    <img src="images/de-niro.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">#}
-{#    <p><span class="w3-large w3-text-black w3-margin-right">Роберт Де-Ниро.</span> Итальянский парикмахер.</p>#}
-{#    <p>Проект по созданию интернет магазина. Все работы выполнены качественно и в срок!</p><br>#}
-{#   #}
-{#    <img src="images/kluni.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">#}
-{#    <p><span class="w3-large w3-text-black w3-margin-right">Джорж Клуни.</span> Отставной американский матрос.</p>#}
-{#    <p>Oleg saved us from a disaster.</p><br>#}
-{#    #}
-{#    <img src="images/pitt.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">#}
-{#    <p><span class="w3-large w3-text-black w3-margin-right">Брэд Питт.</span> Голливудский актор.</p>#}
-{#    <p>No one is better than Oleg.</p><br>#}
-    
-    <!-- Grid for pricing tables -->
+
     <h3 class="w3-padding-16">Ожидания по зарплате</h3>
     <p>Обсуждаются любые условия</p>
   <!-- End About Section -->
@@ -198,20 +217,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: olegvpc@yandex.ru</p>
     </div>
 
-{#    <p>Связаться с Вами? Направьте мне запрос</p>#}
-{#    <form action="/action_page.php" target="_blank">#}
-{#      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Имя" required name="Имя"></p>#}
-{#      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Ваш Email" required name="Ваш Email"></p>#}
-{#      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Тема письма" required name="Тема письма"></p>#}
-{#      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Сообщение" required name="Сообщение"></p>#}
-{#      <p>#}
-{#        <button class="w3-button w3-light-grey w3-padding-large" type="submit">#}
-{#          <i class="fa fa-paper-plane"></i> Отправить письмо#}
-{#          <!-- <i class="fa fa-camera-retro"></i> Отправить письмо -->#}
-{#        </button>#}
-{#      </p>#}
-{#    </form>#}
-  <!-- End Contact Section -->
   </div>  
   
   <!-- Footer -->
@@ -240,14 +245,8 @@ function closeNav() {
   document.getElementById("mySidebar").style.display = "none";
 }
 
-// const firstListPhoto = document.querySelector("#first")
-// firstListPhoto.addEventListener("click", handleClick)
-
-// function handleClick(event) {
-//   alert("ПРИЕХАЛИ")
-// }
-
 </script>
+<script type="module" src="../../static/index.js"></script>
 
 </body>
 </html>
