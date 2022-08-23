@@ -28,11 +28,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
 <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
-    <i class="fa fa-remove"></i>
-{#       <span class="btn-close-popup">#}
-{#         <span class="btn-x-equal_click"></span>#}
-{#       </span>#}
+  <div class="btn-close-popup">
+      <span class="btn-x-transform"></span>
+{#    <div href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">#}
+  </div>
+{#  <i class="fa fa-remove"></i>#}
+
   </a>
   <div class="w3-bar-block w3-center">
     <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">В начало</a>
@@ -187,7 +188,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </section>
 
     <h3 class="w3-padding-24">Отзывы Заказчиков</h3>
-      <p>Скоро будут</p>
+      <p>Просто нет слов...</p>
 
     <h3 class="w3-padding-16">Ожидания по зарплате</h3>
     <p>Обсуждаются любые условия</p>
@@ -235,7 +236,8 @@ function closeNav() {
 }
 
 </script>
-<script type="module" src="../../static/index.js"></script>
+<script type="module" src="../../static/index.js"></script> // для сайта - все в static
+{#<script type="module" src="../../scripts/index.js"></script> // для локального запуска#}
 
 </body>
 </html>

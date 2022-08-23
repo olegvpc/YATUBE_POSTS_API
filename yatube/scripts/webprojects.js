@@ -14,4 +14,9 @@ export const dataWebProjects = [
     link: "https://olegvpc.github.io/mesto/",
     image: "../../media/images/mesto.png",
   },
+  {
+    description: "Проект Место: типа Инстаграмм - реализовано в React",
+    link: "https://olegvpc.github.io/mesto-react/",
+    image: "../../media/images/mesto-react.png",
+  },
 ];

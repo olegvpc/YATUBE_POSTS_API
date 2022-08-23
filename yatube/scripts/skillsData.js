@@ -23,7 +23,7 @@ export const dataSkills = [
     levelSkill: 40,
     description: "Webpack и другие библиотеки NPM"
   },
-      {
+  {
     nameSkill: "NodeJS",
     logoSkill: "../../media/images/nodeJS.svg",
     levelSkill: 80,
