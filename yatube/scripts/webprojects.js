@@ -19,4 +19,9 @@ export const dataWebProjects = [
     link: "https://olegvpc.github.io/mesto-react/",
     image: "../../media/images/mesto-react.png",
   },
+    {
+    description: "Дипломная работа: Поиск и сохранение любимых фильмов на сервере",
+    link: "https://58.160.39.232",
+    image: "../../media/images/movie-project.png",
+  },
 ];
