@@ -50,10 +50,14 @@ python3 manage.py runserver
 ###Проект размещен на яндекс web-hosting:
 https://olegvpc.ru
 
-Вход на виртульную машину
+#### Вход на виртульную машину
 
-ssh olegvpc123@51.250.9.118
+ssh olegvpc123@51.250.93.138
+
 Проект работает не в контейнере
+
+#### Копирование файлов на сервер
+scp movie-project.png ssh olegvpc123@51.250.93.138:
 
 ###поднят wsgi-сервер: gunicorn - сервер внутренней обработки
 ```python
