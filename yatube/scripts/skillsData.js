@@ -28,5 +28,11 @@ export const dataSkills = [
     logoSkill: "../../media/images/nodeJS.svg",
     levelSkill: 80,
     description: "БЛА-БЛА-БЛА"
+  },
+  {
+    nameSkill: "ElectronJS",
+    logoSkill: "../../media/images/electron.svg",
+    levelSkill: 70,
+    description: "Создание на Приложений на FrameWork ElectronJS"
   }
 ]

@@ -60,7 +60,7 @@ ssh olegvpc123@51.250.93.138
 scp movie-project.png ssh olegvpc123@51.250.93.138:
 
 ###поднят wsgi-сервер: gunicorn - сервер внутренней обработки
-```python
+```shell
 sudo pip install gunicorn
 ```
 gunicorn --bind 0.0.0.0:8000 yatube.wsgi

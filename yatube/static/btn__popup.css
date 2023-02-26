@@ -1,0 +1,90 @@
+.btn-x-equal_click {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  z-index: 10;
+  margin: auto;
+}
+.btn-x-equal_click:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+.btn-x-equal_click::before {
+  content: "";
+  width: 100%;
+  border-top: 10px solid dimgrey;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  transition: transform .3s linear 0s;
+}
+.btn-x-equal_click::after {
+  content: "";
+  width: 100%;
+  border-bottom: 10px solid dimgrey;
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  transition: transform .3s linear 0s;
+}
+.btn-x-equal_click:hover.btn-x-equal_click::before {
+  /*transform: translate(0, 20px);*/
+  transform: rotate(-25deg);
+  border-top-left-radius: 5px;
+}
+.btn-x-equal_click:hover.btn-x-equal_click::after {
+  /*transform: translate(0, -20px);*/
+  transform: rotate(25deg);
+  border-bottom-left-radius: 5px;
+}
+
+/*.x-transform.btn-x-equal_click::before {*/
+/*  transition: transform .3s linear .2s;*/
+/*  transform: translate(0, 10px) rotate(-45deg);*/
+/*}*/
+/*.x-transform.btn-x-equal_click::after {*/
+/*  transition: transform .3s linear .2s;*/
+/*  transform: translate(0, -10px) rotate(45deg);*/
+/*}*/
+/* кнопка закрытия popup*/
+.btn-x-transform {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  /*border: 1px solid red;*/
+
+}
+.btn-x-transform:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+.btn-x-transform::before {
+  content: "";
+  width: 100%;
+  border-top: 10px solid dimgrey;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  transition: transform .3s linear 0s;
+  transform: translate(0, 10px) rotate(45deg);
+}
+.btn-x-transform::after {
+  content: "";
+  width: 100%;
+  border-bottom: 10px solid dimgrey;
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  transition: transform .3s linear 0s;
+  transform: translate(0, -10px) rotate(-45deg);
+}
+.btn-x-transform:hover.btn-x-transform::before {
+  transform: rotate(25deg);
+  border-top-right-radius: 5px;
+}
+.btn-x-transform:hover.btn-x-transform::after {
+  transform: rotate(-25deg);
+  border-bottom-right-radius: 5px;
+}
