@@ -2,7 +2,7 @@ export const dataSkills = [
   {
     nameSkill: "CSS-skill",
     logoSkill: "../../media/images/css.svg",
-    levelSkill: 60,
+    levelSkill: 70,
     description: "Организация Стилей CSS в соответствии с BEM Nested<br>Создание анимаций, градиентов, SVG-файлов"
   },
   {
@@ -14,14 +14,32 @@ export const dataSkills = [
   {
     nameSkill: "JS-skill",
     logoSkill: "../../media/images/js.svg",
-    levelSkill: 70,
-    description: "ООП в разметке<br>Модульное построение кода"
+    levelSkill: 90,
+    description: "Vanilla JS, ООП, Closure, Promise, Async-Await ...  <br>Модульное построение кода"
+  },
+  {
+    nameSkill: "Github",
+    logoSkill: "../../media/images/github.svg",
+    levelSkill: 80,
+    description: "Использование GitHub и GitLab"
   },
   {
     nameSkill: "NodeJS",
     logoSkill: "../../media/images/nodeJS.svg",
-    levelSkill: 40,
-    description: "Webpack и другие библиотеки NPM"
+    levelSkill: 60,
+    description: "Использование Webpack и Express"
+  },
+    {
+    nameSkill: "Django",
+    logoSkill: "../../media/images/django.svg",
+    levelSkill: 70,
+    description: "Создание Приложений на FrameWork Django (Python)"
+  },
+  {
+    nameSkill: "Docker",
+    logoSkill: "../../media/images/docker.svg",
+    levelSkill: 80,
+    description: "Запуск приложений в Docker и docker-compose"
   },
   {
     nameSkill: "React",
@@ -40,5 +58,11 @@ export const dataSkills = [
     logoSkill: "../../media/images/electron.svg",
     levelSkill: 70,
     description: "Создание Приложений на FrameWork ElectronJS"
+  },
+    {
+    nameSkill: "PHP",
+    logoSkill: "../../media/images/laravel.svg",
+    levelSkill: 80,
+    description: "Создание Приложений на FrameWork Laravel (PHP)"
   }
 ]

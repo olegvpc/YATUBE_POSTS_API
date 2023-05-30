@@ -18,10 +18,10 @@ git clone git@github.com:olegvpc/hw05_final.git
 Cоздать и активировать виртуальное окружение:
 
 ```
-python3 -m venv env
+python3 -m venv venv
 ```
 ```
-source env/bin/activate
+source venv/bin/activate
 ```
 
 ```
