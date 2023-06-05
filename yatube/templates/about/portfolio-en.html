@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../static/portfolio.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="../../media/images/favicon.ico">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('{{ MEDIA_URL }}images/photo-portfolio.jpg');
+  min-height: 100%;
+}
+</style>
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <div class="btn-close-popup">
+      <span class="btn-x-transform"></span>
+{#    <div href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">#}
+  </div>
+{#  <i class="fa fa-remove"></i>#}
+
+  <div class="w3-bar-block w3-center">
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Begin</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Achivement</a>
+    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About Me</a>
+    <a href="#web-develop" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About WEB dev</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+
+<div class="w3-main w3-padding-large" style="margin-left:40%;position:relative">
+
+  <a class="btn-lang btn-lang-rus" href="./">
+{#      <a href="#about" class="btn-lang-eng" ></a>#}
+  </a>
+
+  <!-- Menu icon to open sidebar -->
+  <span class="btn-open-popup">
+     <span class="btn-x-equal_click"></span>
+  </span>
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+    <h1 class="w3-jumbo"><b>Tkach Oleg</b></h1>
+    <p>Full-stack developer:<br> Python(Django), JavaScript(React, Express), PHP(Laravel)</p>
+  </header>
+
+  <!-- Portfolio Section -->
+  <div class="w3-padding-32 w3-content" id="portfolio">
+    <h2 class="w3-text-grey">Achivements</h2>
+    <hr style="color: gray; height: 2px; border: none; background-color: gray;" class="w3-hover-opacity">
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px;">
+      <p>
+        <h5 class="w3-text-black">My first project using Django, Data base SQLite, Models and migrations</h5>
+      </p>
+      <a href="https://github.com/olegvpc/Anfisa_test_icecream" target="_blank"> <img id="anfisa" src='{{ MEDIA_URL }}images/anfisa4friends.jpg' style="width:100%; cursor:pointer" class="w3-hover-opacity">GitHub repository
+      </a>
+
+      <hr style="color: gray; height: 2px; border: none; background-color: gray;" class="w3-hover-opacity">
+
+      <p>
+        <h5 class="w3-text-black"><a href="https://olegvpc.ru" target="_blank">Huge project of social network (Yatube):</a></h5>
+      </p>
+      <p>
+          <a href="https://github.com/olegvpc/YATUBE_POSTS_API" target="_blank">GitHub repository</a>
+      </p>
+        <!-- End 1-nd photo grid -->
+      <div class="w3-half">
+          <a href="https://olegvpc.ru" target="_blank"> <img src='{{ MEDIA_URL }}images/1.jpg' style="width:100%" class="w3-hover-opacity" alt="picture index"></a>
+          <p>it lets to create and to edit posts</p>
+        <a href="https://www.olegvpc.ru/auth/login/" target="_blank"> <img src='{{ MEDIA_URL }}images/2.jpg' style="width:100%" class="w3-hover-opacity" alt="picture auth-login"></a>
+          <p>it lets filter posts by autors (only for registered users)</p>
+      </div>
+
+      <div class="w3-half">
+        <a href="https://www.olegvpc.ru/auth/login/" target="_blank"> <img src='{{ MEDIA_URL }}images/3.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка author"></a>
+          <p>additional features for edit profile</p>
+        <a href="https://www.olegvpc.ru/api/v1/swagger/" target="_blank"> <img src='{{ MEDIA_URL }}images/4.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка Swager"></a>
+          <p>working with API end-points</p>
+      </div>
+    </div>
+    <!-- End 2-nd photo grid -->
+    <div class="w3-row-padding" style="margin:0 -16px;">
+
+      <p><hr style="color: gray; height: 2px; border: none; background-color: gray;" class="w3-hover-opacity"></p>
+      <p>
+        <h5 class="w3-text-black">Diplom project: creating site for cooking</h5>
+      </p>
+      <p>
+          <a href="https://github.com/olegvpc/foodgram-project-react" target="_blank">GitHub repository</a>
+      </p>
+      <div class="w3-half">
+        <a href="http://62.84.112.83/recipes" target="_blank"> <img src='{{ MEDIA_URL }}images/recipe.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка index-recipe"></a>
+          <p>it lets to create and edit cooking recepy</p>
+        <a href="https://docs.docker.com/get-started/overview/" target="_blank"> <img src='{{ MEDIA_URL }}images/docker.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка docker"></a>
+          <p>The project works in docker. Images are on DockerHub</p>
+      </div>
+
+      <div class="w3-half">
+        <a href="https://github.com/olegvpc/foodgram-project-react/actions/runs/1766810371" target="_blank"> <img src='{{ MEDIA_URL }}images/action.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка action"></a>
+          <p>it is using ACTIONS on GitHub</p>
+        <a href="http://62.84.112.83/api/docs/#operation/%D0%9F%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D1%86%D0%B5%D0%BF%D1%82%D0%B0" target="_blank"> <img src='{{ MEDIA_URL }}images/redoc.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка redoc"></a>
+          <p>frontend get data from backend through API</p>
+      </div>
+    </div>
+    <!-- End 3-d photo grid -->
+
+  <!-- End Portfolio Section -->
+  </div>
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <h2>About Me</h2>
+    <hr style="color: gray; height: 2px; border: none; background-color: gray;" class="w3-hover-opacity">
+    <p>Professional skills:
+      <br> -experience with HTML5, CSS3, JS;
+      <br>- knowledge of JavaScript/ React/ Python(Django)/ PHP(Laravel)/ GitHub/ Docker;
+      <br>- adaptive layout experience;
+      <br>- experience in creating an HTML page of a website based on design layouts;
+      <br>- experience in the layout of websites and templates for CMS;
+      <br>- skills of linking scripts to the user interface that provide visualization and animation of site pages;
+      <br>- skills of providing the necessary level of user interface (UI — User Interface) and interaction experience (UX — User Experience);
+      <br>- knowledge of cross-browser layout;
+      <br>- knowledge of PhotoShop;
+      <br>- knowledge of other programming languages.
+    </p>
+      <br>
+        <span style="color: black; line-height: 2">Completed additional Yandex courses: "Python backend developer"</span>
+
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <img src='{{ MEDIA_URL }}images/diplom22.jpg' style="width:100%";>
+      </div>
+      <br>
+      <span style="color: black; line-height: 2;">Completed additional Yandex courses: "WEB(React) developer</span>
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <img src='{{ MEDIA_URL }}images/diplom-web-eng.png' style="width:100%";>
+      </div>
+    </p>
+    <section class="web-develop" about="Примеры WEB-CSS-JS">
+      <p class="web-develop__title">
+          Web projects (frontend get data from backend through API)
+      </p>
+
+      <div class="web-develop__cards" id="web-develop">
+        <!-- добавление новых карточек-проектов -->
+
+
+      </div> <!-- конец секции добавления карточек пректов -->
+      <template id="template-web-develop-card">
+        <article class="web-develop__card">
+          <figure class="web-develop__card-figure">
+            <a class="web-develop__link" href="https://olegvpc.github.io/how-to-learn/" target="_blank">
+              <img class="web-develop__card-img" src="../../media/images/how-to-learn.png" alt="">
+            </a>
+            <figcaption>
+              <p class="web-develop__card-description">Описание проекта Как правильно учиться</p>
+            </figcaption>
+          </figure>
+        </article>
+      </template>
+
+    </section>
+    <section class="skills">
+      <p class="w3-wide">My skills</p>
+      <div class="skills-container skills_width">
+          <!-- добавление новых skills -->
+
+      </div>
+      <template class="template-skills-element">
+        <div class="skills__element">
+          <img class="skills__logo" src="../../media/images/css.svg" alt="scc-logo">
+          <div class="w3-light-grey skills_width">
+            <div class="skills__line_gray" style="width: 80%">
+              <p class="skills__title">Организация Стилей CSS в соответствии с BEM Nested<br>Создание анимаций, градиентов, SVG-файлов</p>
+            </div>
+          </div>
+        </div>
+      </template>
+    </section>
+
+    <h3 class="w3-padding-24">Feedback from Customers</h3>
+      <p>A very skilled programmer. Managed to figure it out in the shortest possible time
+          a variety of serious problems and explore new technologies.
+          All issues were resolved promptly. The man was always connected.
+          Communication was easy. All tasks understood and
+          performed quickly and professionally.</p>
+      <p style="color: black; font-size: 14px; font-style: italic">2023-02/ Pikalov Nikolay/ Lead-FullStack-Developer/ Infovision</p>
+
+    <h3 class="w3-padding-16">Salary expectations</h3>
+    <p>ready to discuss</p>
+  <!-- End About Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+    <h2>Connect with me
+    </h2>
+    <hr class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> ... Borisovskie prudy, Moscow, Russia</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> WhatsApp/ Telegramm: +7 903 009 7538</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: olegvpc@yandex.ru</p>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium"><a href="https://www.w3schools.com/w3css/default.asp" target="_blank">All right reserved</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+</script>
+<script type="module" src="../../static/index.js"></script>  {# для сайта - все в static #}
+{#<script type="module" src="../../scripts/index.js"></script> // для локального запуска#}
+
+</body>
+</html>

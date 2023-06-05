@@ -34,7 +34,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </div>
 {#  <i class="fa fa-remove"></i>#}
 
-  </a>
   <div class="w3-bar-block w3-center">
     <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">В начало</a>
     <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Достижения</a>
@@ -45,13 +44,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </nav>
 
 <!-- Page Content -->
+
 <div class="w3-main w3-padding-large" style="margin-left:40%;position:relative">
+  <!-- Swither language -->
+  <a class="btn-lang btn-lang-eng" href="./en">
+  </a>
 
   <!-- Menu icon to open sidebar -->
-  {#  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>#}
-{#    <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0" onclick="openNav()">#}
-{#        <i class="btn-x-equal_click">HELLO</i>#}
-{#    </span>#}
   <span class="btn-open-popup">
      <span class="btn-x-equal_click"></span>
   </span>
@@ -84,13 +83,17 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </p>
         <!-- End 1-nd photo grid -->
       <div class="w3-half">
-        <a href="https://olegvpc.ru" target="_blank"> <img src='{{ MEDIA_URL }}images/1.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка index"></a>позволяет создавать и просматривать посты
-        <a href="https://www.olegvpc.ru/auth/login/" target="_blank"> <img src='{{ MEDIA_URL }}images/2.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка auth-login"></a>позволяет фильтровать посты по авторам (для зарегистрированных)
+          <a href="https://olegvpc.ru" target="_blank"> <img src='{{ MEDIA_URL }}images/1.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка index"></a>
+          <p>позволяет создавать и просматривать посты</p>
+        <a href="https://www.olegvpc.ru/auth/login/" target="_blank"> <img src='{{ MEDIA_URL }}images/2.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка auth-login"></a>
+          <p>позволяет фильтровать посты по авторам (для зарегистрированных)</p>
       </div>
 
       <div class="w3-half">
-        <a href="https://www.olegvpc.ru/auth/login/" target="_blank"> <img src='{{ MEDIA_URL }}images/3.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка author"></a>расширенные возможности по редактированию профиля
-        <a href="https://www.olegvpc.ru/api/v1/swagger/" target="_blank"> <img src='{{ MEDIA_URL }}images/4.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка Swager"></a>получение и корректировка базы данных по API
+        <a href="https://www.olegvpc.ru/auth/login/" target="_blank"> <img src='{{ MEDIA_URL }}images/3.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка author"></a>
+          <p>расширенные возможности по редактированию профиля</p>
+        <a href="https://www.olegvpc.ru/api/v1/swagger/" target="_blank"> <img src='{{ MEDIA_URL }}images/4.jpg' style="width:100%" class="w3-hover-opacity" alt="картинка Swager"></a>
+          <p>получение и корректировка базы данных по API</p>
       </div>
     </div>
     <!-- End 2-nd photo grid -->
@@ -121,12 +124,20 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
     <h2>О себе</h2>
     <hr style="color: gray; height: 2px; border: none; background-color: gray;" class="w3-hover-opacity">
-    <p>Привет! Меня зовут Олег Ткач. Я закончил военное училище по специальности "Автоматизированные системы управления".
-      За время своей трудовой деятельности я работал офицером на Узле связи Ген штаба (Москва), после увольнения из армии
-      создал Компанию по продаже компьютеров, работал в коммерческих подразделениях федеральных операторов связи
-      (Оранж , Билайн, Ростелеком, МТС).
-      Но в 2021 году решил попробовать себя в программировании и....
-      МЕНЯ ЗАТЯНУЛО С ГОЛОВОЙ :-)<br>
+      <p>
+        Профессиональные навыки:
+        <br>- опыт работы с HTML5, CSS3, JS;
+        <br>- знание JavaScript/ React/ Python(Django)/ PHP(Laravel)/ GitHub/ Docker;
+        <br>- опыт адаптивной верстки;
+        <br>- опыт создания HTML-страницы сайта на основе дизайн-макетов;
+        <br>- опыт вёрстки сайтов и шаблонов для CMS;
+        <br>- навыки привязки к пользовательскому интерфейсу скриптов, которые обеспечивают визуализацию и анимацию страниц сайта;
+        <br>- навыки обеспечения необходимого уровня пользовательского интерфейса (UI — User Interface) и опыта взаимодействия (UX — User Experience);
+        <br>- знание кросс-браузерной верстки;
+        <br>- знания PhotoShop;
+        <br>- знание других языков программирования.
+      </p>
+      <br>
         <span style="color: black; line-height: 2">В апреле 2021 года а поступил на курсы в Яндекс по профессии "Python backend developer"</span>
 
       <div class="w3-row-padding" style="margin:0 -16px;">

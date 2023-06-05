@@ -3,66 +3,66 @@ export const dataSkills = [
     nameSkill: "CSS-skill",
     logoSkill: "../../media/images/css.svg",
     levelSkill: 70,
-    description: "Организация Стилей CSS в соответствии с BEM Nested<br>Создание анимаций, градиентов, SVG-файлов"
+    description: "Creating CSS with BEM Nested<br>Creating animations, gradients, SVG-pictutes"
   },
   {
     nameSkill: "HTML-skill",
     logoSkill: "../../media/images/http5.svg",
     levelSkill: 80,
-    description: "Разметка и стили по дизайну Figma<br>Использование &lt;template&gt; для заполнения данными"
+    description: "Using Figma for creating disign of sites<br>Using &lt;template&gt; for creating elements"
   },
   {
     nameSkill: "JS-skill",
     logoSkill: "../../media/images/js.svg",
     levelSkill: 90,
-    description: "Vanilla JS, ООП, Closure, Promise, Async-Await ...  <br>Модульное построение кода"
+    description: "Vanilla JS, ООП, Closure, Promise, Async-Await ...<br>Modular code building"
   },
   {
     nameSkill: "Github",
     logoSkill: "../../media/images/github.svg",
     levelSkill: 80,
-    description: "Использование GitHub и GitLab"
+    description: "GitHub / GitLab as an essential development tool"
   },
   {
     nameSkill: "NodeJS",
     logoSkill: "../../media/images/nodeJS.svg",
     levelSkill: 60,
-    description: "Использование Webpack и Express"
+    description: "Webpack и Express"
   },
     {
     nameSkill: "Django",
     logoSkill: "../../media/images/django.svg",
     levelSkill: 70,
-    description: "Создание Приложений на FrameWork Django (Python)"
+    description: "creating App on FrameWork Django (Python)"
   },
   {
     nameSkill: "Docker",
     logoSkill: "../../media/images/docker.svg",
     levelSkill: 80,
-    description: "Запуск приложений в Docker и docker-compose"
+    description: "Application launch in Docker / docker-compose"
   },
   {
     nameSkill: "React",
     logoSkill: "../../media/images/react.svg",
     levelSkill: 80,
-    description: "Разработка приложения на React с авторизацией пользователей"
+    description: "Creating Application on React with Auth."
   },
   {
     nameSkill: "Express",
     logoSkill: "../../media/images/mongodb.svg",
     levelSkill: 90,
-    description: "Создание на Express API-сервера данных для приложения на MongoDB---"
+    description: "Back-end on NodeJS (Express) DB: MongoDB"
   },
   {
     nameSkill: "ElectronJS",
     logoSkill: "../../media/images/electron.svg",
     levelSkill: 70,
-    description: "Создание Приложений на FrameWork ElectronJS"
+    description: "Creating Application on FrameWork ElectronJS"
   },
     {
     nameSkill: "PHP",
     logoSkill: "../../media/images/laravel.svg",
     levelSkill: 80,
-    description: "Создание Приложений на FrameWork Laravel (PHP)"
+    description: "Creating Application on FrameWork Laravel (PHP)"
   }
 ]
